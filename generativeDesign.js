@@ -21,10 +21,14 @@ function backgroundColor() {
 function drawCircle() {
    for (let i = 0; i <= 20; i++){
       for (let j = 0; j <= 20; j++){
-         context.fillStyle = Utils.hsla(0, 0, 100, 50);
+         let radius = 50;
+         context.fillStyle = Utils.hsla(0, 0, 100, 40);
          Utils.fillCircle(i * 100, j * 100, 50);
+         Utils.fillCircle(i * 100, j * 100, 45);
          Utils.fillCircle(i * 100, j * 100, 40);
+         Utils.fillCircle(i * 100, j * 100, 35);
          Utils.fillCircle(i * 100, j * 100, 30);
+         Utils.fillCircle(i * 100, j * 100, 25);
          Utils.fillCircle(i * 100, j * 100, 20);
          Utils.fillCircle(i * 100, j * 100, 10);
       }
