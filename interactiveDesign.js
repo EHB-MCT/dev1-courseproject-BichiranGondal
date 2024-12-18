@@ -21,7 +21,7 @@ function background() {
 
 function drawStars() {
    for (let i = 1; i < 150; i++) {
-      context.fillStyle = "#FFD354";
+      context.fillStyle = "#F1F781";
       Utils.fillCircle(Utils.randomNumber(0, width), Utils.randomNumber(0, height), Utils.randomNumber(2, 5));
    }
 }
