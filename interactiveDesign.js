@@ -62,4 +62,7 @@ function animate() {
 function moveStars(eventData) {
    let mouseX = eventData.pageX;
    let mouseY = eventData.pageY;
+   updateStars(mouseX, mouseY);
 }
+
+context.canvas.addEventListener("mousemove", moveStars);
