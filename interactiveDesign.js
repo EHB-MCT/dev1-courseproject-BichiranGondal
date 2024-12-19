@@ -16,12 +16,10 @@ background();
 fillSky();
 animate();
 
-
 function background() {
    context.fillStyle = gradient;
    context.fillRect(0, 0, width, height);
 }
-
 
 function fillSky() {
    for (let i = 0; i < 150; i++) {
@@ -59,8 +57,6 @@ function animate() {
    requestAnimationFrame(animate); //animation herhalen
 }
 
-
-
 /**
  * 
  * @param {MouseEvent} eventData 
@@ -75,8 +71,6 @@ function moveStars(eventData) {
 }
 
 context.canvas.addEventListener("mousemove", moveStars);
-
-
 
 function signature(size) {
 
@@ -96,6 +90,4 @@ function signature(size) {
    context.rect(((size * 6) / 12) * 7, ((size * 6) / 12) * 5, size * 2, size)
    context.rect(((size * 6) / 12) * 5, ((size * 6) / 12) * 7, size, size*2)
    context.fill();
-
-
 }
