@@ -26,17 +26,18 @@ function fillSky() {
          x: Utils.randomNumber(0, width),
          y: Utils.randomNumber(0, height),
          r: Utils.randomNumber(2, 5),
-         speed: Utils.randomNumber(0.001, 0.02)
+         speed: Utils.randomNumber(0.001, 0.02),
+         color: Utils.rgb(Utils.randomNumber(1, 255), Utils.randomNumber(1, 255), Utils.randomNumber(1, 255))
       };
       stars.push(star);
    }
 }
 
 function drawStars() {
-   context.fillStyle = "#F1F781";
    for (let i = 0; i < stars.length; i++) {
       let star2 = stars[i];
-      Utils.fillCircle(star2.x, star2.y, star2.r);
+      context.fillStyle = star2.color;
+      Utils.fillCircle(star2.x, star2.y, star2.r); //sterren tekenen
    }
 }
 
