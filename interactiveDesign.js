@@ -11,14 +11,17 @@ gradient.addColorStop(1, "#450085");
 
 let stars = [];
 
+signature(50);
 background();
 fillSky();
 animate();
+
 
 function background() {
    context.fillStyle = gradient;
    context.fillRect(0, 0, width, height);
 }
+
 
 function fillSky() {
    for (let i = 0; i < 150; i++) {
@@ -56,6 +59,8 @@ function animate() {
    requestAnimationFrame(animate); //animation herhalen
 }
 
+
+
 /**
  * 
  * @param {MouseEvent} eventData 
@@ -70,3 +75,27 @@ function moveStars(eventData) {
 }
 
 context.canvas.addEventListener("mousemove", moveStars);
+
+
+
+function signature(size) {
+
+   context.beginPath();
+   context.rect(0, 0, size*6, size*6)
+   context.fill();
+
+   context.beginPath();
+   context.fillStyle = "#C4CA54";
+   context.rect((size * 6) / 12, (size * 6) / 12, size, size)
+   context.rect(((size * 6) / 12) * 9, (size * 6) / 12, size, size)
+   context.rect((size * 6) / 12, ((size * 6) / 12) * 9, size, size)
+   context.rect(((size * 6) / 12) * 9, ((size * 6) / 12) * 9, size, size)
+   context.rect(((size * 6) / 12) * 3, ((size * 6) / 12) * 3, size, size)
+   context.rect(((size * 6) / 12) * 7, ((size * 6) / 12) * 3, size, size)
+   context.rect((size * 6) / 12, ((size * 6) / 12) * 5, size * 2, size)
+   context.rect(((size * 6) / 12) * 7, ((size * 6) / 12) * 5, size * 2, size)
+   context.rect(((size * 6) / 12) * 5, ((size * 6) / 12) * 7, size, size*2)
+   context.fill();
+
+
+}
